@@ -62,15 +62,14 @@ export default function HeroCanvas(): React.JSX.Element {
       {/* ── Overlay Oscuro / Degradado ── */}
       <div className="absolute inset-0 bg-black/30 bg-gradient-to-t from-[#0D1117]/90 via-[#0D1117]/20 to-[#0D1117]/40 pointer-events-none" />
 
-      {/* ── Contenido de Texto ── */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10 pointer-events-none">
-        
+      {/* ── Textos Superiores (Bajo NavBar) ── */}
+      <div className="absolute inset-x-0 top-32 md:top-40 flex flex-col items-center text-center px-6 z-10 pointer-events-none">
         {/* Etiqueta superior */}
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-[#00B4D8] uppercase tracking-widest mb-6 font-semibold"
+          className="text-[#00B4D8] uppercase tracking-widest mb-6 font-semibold shadow-black drop-shadow-md"
           style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px' }}
         >
           CLÍNICA ALERGIAS E INMUNOLOGÍA
@@ -91,13 +90,17 @@ export default function HeroCanvas(): React.JSX.Element {
         >
           Tu mejoría en alergias empieza aquí.
         </motion.h1>
+      </div>
 
+      {/* ── Textos Inferiores y CTA ── */}
+      <div className="absolute inset-x-0 bottom-44 flex flex-col items-center text-center px-6 z-10 pointer-events-none">
+        
         {/* Subtítulo */}
         <motion.p
            initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
            transition={{ duration: 1, delay: 0.8 }}
-          className="text-white/80 mt-6"
+          className="text-white/90 font-medium drop-shadow-md"
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: 'clamp(1rem, 2vw, 1.125rem)',
@@ -111,7 +114,7 @@ export default function HeroCanvas(): React.JSX.Element {
            initial={{ opacity: 0, scale: 0.9 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ duration: 1, delay: 1.1 }}
-           className="mt-10 pointer-events-auto"
+           className="mt-6 pointer-events-auto"
         >
             <button 
                 onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
@@ -122,19 +125,19 @@ export default function HeroCanvas(): React.JSX.Element {
                 Conoce más
             </button>
         </motion.div>
-
-        {/* Scroll indicator con bounce */}
-        <motion.div
-           initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-           transition={{ duration: 1, delay: 1.5 }}
-           className="absolute bottom-8 animate-bounce pointer-events-auto cursor-pointer flex flex-col items-center gap-2"
-           onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          <span className="text-white/50 text-[10px] uppercase tracking-widest" style={{ fontFamily: 'DM Sans, sans-serif' }}>Descubrir</span>
-          <div className="w-[1px] h-8 bg-gradient-to-b from-white/50 to-transparent" />
-        </motion.div>
       </div>
+
+      {/* Scroll indicator con bounce */}
+      <motion.div
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{ duration: 1, delay: 1.5 }}
+         className="absolute inset-x-0 bottom-24 flex flex-col items-center gap-2 pointer-events-auto cursor-pointer"
+         onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        <span className="text-white/60 text-[10px] uppercase tracking-widest font-semibold drop-shadow" style={{ fontFamily: 'DM Sans, sans-serif' }}>Descubrir</span>
+        <div className="w-[1px] h-8 bg-gradient-to-b from-[#00B4D8] to-transparent" />
+      </motion.div>
 
       {/* ── Indicadores del carrusel ── */}
       <div className="absolute bottom-12 left-0 right-0 flex justify-center gap-4 z-10 pointer-events-auto">
