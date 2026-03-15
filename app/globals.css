@@ -1,0 +1,60 @@
+/* [UPDATED] 2026-03-14 16:35 - CSS global Tailwind v4: Google Fonts primero, luego Tailwind, variables y utilidades */
+
+/* ─── Google Fonts DEBE ir PRIMERO (antes de cualquier otra regla) ──────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+/* ─── Importar Tailwind CSS v4 (después de @import externos) ─────────── */
+@import "tailwindcss";
+
+/* ─── Extensión de tema Tailwind v4 (@theme reemplaza tailwind.config) ── */
+@theme {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-dm: 'DM Sans', system-ui, sans-serif;
+
+  --color-brand-bg: #F8F7F4;
+  --color-brand-primary: #00B4D8;
+  --color-brand-dark: #0077B6;
+  --color-brand-text: #1A1A2E;
+  --color-brand-muted: #6B7280;
+  --color-brand-section: #0D1117;
+}
+
+/* ─── CSS Custom Properties (para inline styles compatibilidad) ────────── */
+:root {
+  --color-bg: #F8F7F4;
+  --color-primary: #00B4D8;
+  --color-primary-dark: #0077B6;
+  --color-text: #1A1A2E;
+  --color-muted: #6B7280;
+  --color-dark-section: #0D1117;
+}
+
+/* ─── Hide scrollbar ────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Body base ──────────────────────────────────────────────────────────── */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Utility: text shadow hero ─────────────────────────────────────────── */
+.text-shadow-hero {
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Card top accent ────────────────────────────────────────────────────── */
+.card-accent {
+  border-top: 3px solid #00B4D8 !important;
+  border-radius: 1rem !important;
+}
