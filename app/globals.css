@@ -1,4 +1,4 @@
-/* [UPDATED] 2026-03-14 16:35 - CSS global Tailwind v4: Google Fonts primero, luego Tailwind, variables y utilidades */
+/* [UPDATED] 2026-04-01 07:44 - app - CSS global Tailwind v4. Se añadió nota sobre warning @theme */
 
 /* ─── Google Fonts DEBE ir PRIMERO (antes de cualquier otra regla) ──────── */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
@@ -7,6 +7,7 @@
 @import "tailwindcss";
 
 /* ─── Extensión de tema Tailwind v4 (@theme reemplaza tailwind.config) ── */
+/* Nota: Si el editor marca una advertencia en '@theme', es normal en Tailwind v4. Este warning ha sido ignorado creando en /.vscode/settings.json la regla css.lint.unknownAtRules = ignore. */
 @theme {
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-dm: 'DM Sans', system-ui, sans-serif;

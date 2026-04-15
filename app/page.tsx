@@ -1,4 +1,4 @@
-// [UPDATED] 2026-03-14 21:14 - Hero + Servicios + Tratamientos + CAUSAS + Ubicaciones + CTA + Footer
+// [UPDATED] 2026-03-23 06:40 - Actualización de texto en page.tsx
 'use client';
 
 import React from 'react';
@@ -311,7 +311,7 @@ export default function HomePage(): React.JSX.Element {
               lineHeight: 1.65,
             }}
           >
-            Sin compromiso. Sin letra pequeña. Te mostramos el resultado antes de empezar.
+            Sin compromiso. Sin letra pequeña. Te mostramos resultado desde inicio de proceso.
           </motion.p>
 
           {/* Botón CTA */}

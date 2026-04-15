@@ -1,3 +1,4 @@
+// [UPDATED] 2026-04-15 06:55 - componentes/Navbar.tsx se eliminó el rótulo central 'Dra Raquel López'
 // [UPDATED] 2026-03-14 22:33 - Navbar: Allergomed + Dra Raquel López + Tel. 7492-1193 + Reservar cita
 'use client';
 
@@ -64,16 +65,7 @@ export default function Navbar(): React.JSX.Element {
         </div>
       </div>
 
-      {/* ── Centro: Dra Raquel López ── */}
-      <span
-        className={[
-          'hidden md:block text-base font-semibold transition-colors duration-300',
-          scrolled ? 'text-[#1A1A2E]' : 'text-white',
-        ].join(' ')}
-        style={{ fontFamily: 'Playfair Display, Georgia, serif' }}
-      >
-        Dra Raquel López
-      </span>
+      {/* [MODIFIED] 2026-04-15 06:55 - Se eliminó el texto central con el nombre de la Dra. Raquel López a petición. */}
 
       {/* ── Derecha: Teléfono + botón ── */}
       <div className="flex items-center gap-4 md:gap-6">
